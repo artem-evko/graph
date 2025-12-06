@@ -1,0 +1,976 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/asus/ontologies/2025/11/credit/"
+     xml:base="http://www.semanticweb.org/asus/ontologies/2025/11/credit/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:credit="http://www.semanticweb.org/asus/ontologies/2025/11/credit#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#банкЗаявки -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#банкЗаявки">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяЗаявка"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Банк"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#имеетЗаявителя -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#имеетЗаявителя">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#подаётЗаявку"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяЗаявка"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#имеетКредитнуюИсторию -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#имеетКредитнуюИсторию">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#имеетРешение -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#имеетРешение">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяЗаявка"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#РешениеПоЗаявке"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#имеетФинансовоеСостояние -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#имеетФинансовоеСостояние">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ФинансовоеСостояниеКлиента"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#используетШаблон -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#используетШаблон">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОценкаКредитоспособности"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ШаблонОценкиКредита"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#обеспечиваетсяЗалогом -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#обеспечиваетсяЗалогом">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяЗаявка"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбеспечениеПоКредиту"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#объектЗалога -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#объектЗалога">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбеспечениеПоКредиту"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбъектНедвижимости"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#оцениваетЗаявку -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#оцениваетЗаявку">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОценкаКредитоспособности"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяЗаявка"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#оцениваетКлиента -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#оцениваетКлиента">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОценкаКредитоспособности"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#подаётЗаявку -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#подаётЗаявку">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяЗаявка"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#предлагаетПродукт -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#предлагаетПродукт">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Банк"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитныйПродукт"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#учитываетКредитнуюИсторию -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#учитываетКредитнуюИсторию">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОценкаКредитоспособности"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#учитываетУсловияПродукта -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#учитываетУсловияПродукта">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОценкаКредитоспособности"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитныйПродукт"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#учитываетФинансовоеСостояние -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#учитываетФинансовоеСостояние">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОценкаКредитоспособности"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ФинансовоеСостояниеКлиента"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#АдресОбъекта -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#АдресОбъекта">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбъектНедвижимости"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#БазоваяСтавка -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#БазоваяСтавка">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитныйПродукт"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Валюта -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Валюта">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяЗаявка"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Возраст -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Возраст">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ДатаПодачи -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ДатаПодачи">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяЗаявка"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ДатаПоследнейПросрочки -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ДатаПоследнейПросрочки">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ДатаРасчёта -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ДатаРасчёта">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОценкаКредитоспособности"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ЕжемесячныеОбязательства -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ЕжемесячныеОбязательства">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ФинансовоеСостояниеКлиента"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ЕжемесячныйДоход -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ЕжемесячныйДоход">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ФинансовоеСостояниеКлиента"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ЗапрошеннаяСумма -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ЗапрошеннаяСумма">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяЗаявка"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ЗапрошенныйСрокМес -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ЗапрошенныйСрокМес">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяЗаявка"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ИмяШаблона -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ИмяШаблона">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ШаблонОценкиКредита"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#КаналПодачи -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КаналПодачи">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяЗаявка"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#КлассРиска -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КлассРиска">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОценкаКредитоспособности"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#КоличествоИждивенцев -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КоличествоИждивенцев">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#КоличествоПросрочек -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КоличествоПросрочек">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#КоличествоТекущихКредитов -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КоличествоТекущихКредитов">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяПолитика -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяПолитика">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Банк"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Ликвидность -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Ликвидность">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбъектНедвижимости"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#МаксимальнаяДлительностьПросрочкиДн -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#МаксимальнаяДлительностьПросрочкиДн">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#МаксимальнаяСумма -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#МаксимальнаяСумма">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитныйПродукт"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#МаксимальныйКлассРиска -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#МаксимальныйКлассРиска">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ШаблонОценкиКредита"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#МаксимальныйПДН -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#МаксимальныйПДН">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ШаблонОценкиКредита"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#МаксимальныйСрокМес -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#МаксимальныйСрокМес">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитныйПродукт"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#МинимальнаяСумма -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#МинимальнаяСумма">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитныйПродукт"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#МинимальныйСрокМес -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#МинимальныйСрокМес">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитныйПродукт"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#НазваниеБанка -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#НазваниеБанка">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Банк"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#НазваниеПродукта -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#НазваниеПродукта">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитныйПродукт"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#НаличиеЗалогов -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#НаличиеЗалогов">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ФинансовоеСостояниеКлиента"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#НомерЗаявки -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#НомерЗаявки">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяЗаявка"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#НомерЛицензии -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#НомерЛицензии">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Банк"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбщийТрудовойСтаж -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбщийТрудовойСтаж">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОдобреннаяСумма -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОдобреннаяСумма">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#РешениеПоЗаявке"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОдобренныйСрокМес -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОдобренныйСрокМес">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#РешениеПоЗаявке"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ПДН -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ПДН">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОценкаКредитоспособности"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Площадь -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Площадь">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбъектНедвижимости"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Пол -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Пол">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ПорогОдобрения -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ПорогОдобрения">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ШаблонОценкиКредита"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ПорогОтказа -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ПорогОтказа">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ШаблонОценкиКредита"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ПричинаОтказа -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ПричинаОтказа">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#РешениеПоЗаявке"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ПроцентнаяСтавка -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ПроцентнаяСтавка">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#РешениеПоЗаявке"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#РегионПроживания -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#РегионПроживания">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#РегионРегистрации -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#РегионРегистрации">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Банк"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#РекомендованнаяСумма -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#РекомендованнаяСумма">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОценкаКредитоспособности"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#РекомендованныйСрокМес -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#РекомендованныйСрокМес">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОценкаКредитоспособности"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#РыночнаяСтоимость -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#РыночнаяСтоимость">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбъектНедвижимости"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#СвободныйДоход -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#СвободныйДоход">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ФинансовоеСостояниеКлиента"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#СемейноеПоложение -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#СемейноеПоложение">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#СкоринговыйБалл -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#СкоринговыйБалл">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОценкаКредитоспособности"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#СтажНаТекущемМесте -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#СтажНаТекущемМесте">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ФинансовоеСостояниеКлиента"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#СтатусРешения -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#СтатусРешения">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#РешениеПоЗаявке"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ТипБанка -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ТипБанка">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Банк"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ТипЗанятости -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ТипЗанятости">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ФинансовоеСостояниеКлиента"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ТипМодели -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ТипМодели">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ШаблонОценкиКредита"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ТипНедвижимости -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ТипНедвижимости">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбъектНедвижимости"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ТипОбеспечения -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ТипОбеспечения">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяЗаявка"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ТипОбеспеченияТекст -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ТипОбеспеченияТекст">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбеспечениеПоКредиту"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ТипПродукта -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ТипПродукта">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитныйПродукт"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ТребованияКПДН -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ТребованияКПДН">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Банк"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ТребуетЗалог -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ТребуетЗалог">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитныйПродукт"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#УчастникСИС -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#УчастникСИС">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Банк"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ФИО -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ФИО">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ЦельКредита -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ЦельКредита">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяЗаявка"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Банк -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Банк"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяЗаявка -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяЗаявка"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитныйПродукт -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитныйПродукт"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбеспечениеПоКредиту -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбеспечениеПоКредиту"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбъектНедвижимости -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбъектНедвижимости"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОценкаКредитоспособности -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОценкаКредитоспособности"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#РешениеПоЗаявке -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#РешениеПоЗаявке"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ФинансовоеСостояниеКлиента -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ФинансовоеСостояниеКлиента"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ШаблонОценкиКредита -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ШаблонОценкиКредита"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Банк_Альфа -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Банк_Альфа">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Банк"/>
+        <credit:предлагаетПродукт rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Продукт_ПотребКредит"/>
+        <credit:НазваниеБанка>Альфа-Банк</credit:НазваниеБанка>
+        <credit:НомерЛицензии rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1326</credit:НомерЛицензии>
+        <credit:РегионРегистрации>Москва</credit:РегионРегистрации>
+        <credit:ТипБанка>Коммерческий</credit:ТипБанка>
+        <credit:ТребованияКПДН rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.45</credit:ТребованияКПДН>
+        <credit:УчастникСИС rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</credit:УчастникСИС>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Заявка_0001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Заявка_0001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяЗаявка"/>
+        <credit:банкЗаявки rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Банк_Альфа"/>
+        <credit:имеетЗаявителя rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент_Иванов"/>
+        <credit:имеетРешение rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Решение_0001"/>
+        <credit:обеспечиваетсяЗалогом rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Обеспечение_Ипотека"/>
+        <credit:Валюта>RUB</credit:Валюта>
+        <credit:ДатаПодачи rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-10T00:00:00</credit:ДатаПодачи>
+        <credit:ЗапрошеннаяСумма rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500000</credit:ЗапрошеннаяСумма>
+        <credit:ЗапрошенныйСрокМес rdf:datatype="http://www.w3.org/2001/XMLSchema#int">36</credit:ЗапрошенныйСрокМес>
+        <credit:КаналПодачи>онлайн</credit:КаналПодачи>
+        <credit:НомерЗаявки>0001</credit:НомерЗаявки>
+        <credit:ТипОбеспечения>без обеспечения</credit:ТипОбеспечения>
+        <credit:ЦельКредита>Ремонт квартиры</credit:ЦельКредита>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент_Иванов -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент_Иванов">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент"/>
+        <credit:имеетФинансовоеСостояние rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Финансы_Иванов"/>
+        <credit:Возраст rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34</credit:Возраст>
+        <credit:КоличествоИждивенцев rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</credit:КоличествоИждивенцев>
+        <credit:ОбщийТрудовойСтаж rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</credit:ОбщийТрудовойСтаж>
+        <credit:Пол>Муж</credit:Пол>
+        <credit:РегионПроживания>Москва</credit:РегионПроживания>
+        <credit:СемейноеПоложение>Женат</credit:СемейноеПоложение>
+        <credit:ФИО>Иванов Иван Иванович</credit:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория_Иванов -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория_Иванов">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория"/>
+        <credit:имеетКредитнуюИсторию rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория_Иванов"/>
+        <credit:КоличествоПросрочек rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</credit:КоличествоПросрочек>
+        <credit:КоличествоТекущихКредитов rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</credit:КоличествоТекущихКредитов>
+        <credit:МаксимальнаяДлительностьПросрочкиДн rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</credit:МаксимальнаяДлительностьПросрочкиДн>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Обеспечение_Ипотека -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Обеспечение_Ипотека">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбеспечениеПоКредиту"/>
+        <credit:объектЗалога rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбъектНедвижимости_КвартираИванова"/>
+        <credit:ТипОбеспеченияТекст>ипотека на квартиру</credit:ТипОбеспеченияТекст>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбъектНедвижимости_КвартираИванова -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбъектНедвижимости_КвартираИванова">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбъектНедвижимости"/>
+        <credit:АдресОбъекта>Москва, ул. Ленина, д.5</credit:АдресОбъекта>
+        <credit:Ликвидность>высокая</credit:Ликвидность>
+        <credit:Площадь rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</credit:Площадь>
+        <credit:РыночнаяСтоимость rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6500000</credit:РыночнаяСтоимость>
+        <credit:ТипНедвижимости>квартира</credit:ТипНедвижимости>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Оценка_Иванова -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Оценка_Иванова">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОценкаКредитоспособности"/>
+        <credit:оцениваетЗаявку rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Заявка_0001"/>
+        <credit:оцениваетКлиента rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент_Иванов"/>
+        <credit:учитываетКредитнуюИсторию rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория_Иванов"/>
+        <credit:учитываетУсловияПродукта rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Продукт_ПотребКредит"/>
+        <credit:учитываетФинансовоеСостояние rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Финансы_Иванов"/>
+        <credit:ДатаРасчёта rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-10T00:00:00</credit:ДатаРасчёта>
+        <credit:КлассРиска>низкий</credit:КлассРиска>
+        <credit:ПДН rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.33</credit:ПДН>
+        <credit:РекомендованнаяСумма rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">800000</credit:РекомендованнаяСумма>
+        <credit:РекомендованныйСрокМес rdf:datatype="http://www.w3.org/2001/XMLSchema#int">48</credit:РекомендованныйСрокМес>
+        <credit:СкоринговыйБалл rdf:datatype="http://www.w3.org/2001/XMLSchema#int">710</credit:СкоринговыйБалл>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Продукт_ПотребКредит -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Продукт_ПотребКредит">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитныйПродукт"/>
+        <credit:БазоваяСтавка rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.9</credit:БазоваяСтавка>
+        <credit:МаксимальнаяСумма rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3000000</credit:МаксимальнаяСумма>
+        <credit:МаксимальныйСрокМес rdf:datatype="http://www.w3.org/2001/XMLSchema#int">60</credit:МаксимальныйСрокМес>
+        <credit:МинимальнаяСумма rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10000</credit:МинимальнаяСумма>
+        <credit:МинимальныйСрокМес rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</credit:МинимальныйСрокМес>
+        <credit:НазваниеПродукта>Потребительский кредит</credit:НазваниеПродукта>
+        <credit:ТипПродукта>Потребительский</credit:ТипПродукта>
+        <credit:ТребуетЗалог rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</credit:ТребуетЗалог>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Решение_0001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Решение_0001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#РешениеПоЗаявке"/>
+        <credit:ОдобреннаяСумма rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500000</credit:ОдобреннаяСумма>
+        <credit:ОдобренныйСрокМес rdf:datatype="http://www.w3.org/2001/XMLSchema#int">36</credit:ОдобренныйСрокМес>
+        <credit:ПроцентнаяСтавка rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.9</credit:ПроцентнаяСтавка>
+        <credit:СтатусРешения>одобрено</credit:СтатусРешения>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Финансы_Иванов -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Финансы_Иванов">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ФинансовоеСостояниеКлиента"/>
+        <credit:ЕжемесячныеОбязательства rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</credit:ЕжемесячныеОбязательства>
+        <credit:ЕжемесячныйДоход rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120000</credit:ЕжемесячныйДоход>
+        <credit:НаличиеЗалогов rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</credit:НаличиеЗалогов>
+        <credit:СвободныйДоход rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90000</credit:СвободныйДоход>
+        <credit:СтажНаТекущемМесте rdf:datatype="http://www.w3.org/2001/XMLSchema#int">36</credit:СтажНаТекущемМесте>
+        <credit:ТипЗанятости>Наёмный сотрудник</credit:ТипЗанятости>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
