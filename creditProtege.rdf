@@ -839,6 +839,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Банк_УтиПути -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Банк_УтиПути">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Банк"/>
+        <credit:предлагаетПродукт rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Продукт_Ипотека_УтиПути"/>
+        <credit:КредитнаяПолитика>консервативная</credit:КредитнаяПолитика>
+        <credit:НазваниеБанка>УтиПути</credit:НазваниеБанка>
+        <credit:НомерЛицензии>1000</credit:НомерЛицензии>
+        <credit:РегионРегистрации>Москва</credit:РегионРегистрации>
+        <credit:ТипБанка>коммерческий</credit:ТипБанка>
+        <credit:ТребованияКПДН rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</credit:ТребованияКПДН>
+        <credit:УчастникСИС rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</credit:УчастникСИС>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Заявка_0001 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Заявка_0001">
@@ -859,10 +875,32 @@
     
 
 
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Заявка_Ипотека_Петров -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Заявка_Ипотека_Петров">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяЗаявка"/>
+        <credit:банкЗаявки rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Банк_УтиПути"/>
+        <credit:имеетЗаявителя rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент_Петров"/>
+        <credit:имеетРешение rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Решение_Ипотека_Петров"/>
+        <credit:обеспечиваетсяЗалогом rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Обеспечение_Ипотека_Петров"/>
+        <credit:учитываетУсловияПродукта rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Продукт_Ипотека_УтиПути"/>
+        <credit:Валюта>RUB</credit:Валюта>
+        <credit:ДатаПодачи rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-02-01T00:00:00</credit:ДатаПодачи>
+        <credit:ЗапрошеннаяСумма rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12000000</credit:ЗапрошеннаяСумма>
+        <credit:ЗапрошенныйСрокМес rdf:datatype="http://www.w3.org/2001/XMLSchema#int">240</credit:ЗапрошенныйСрокМес>
+        <credit:КаналПодачи>офис</credit:КаналПодачи>
+        <credit:НомерЗаявки>IP-2025-001</credit:НомерЗаявки>
+        <credit:ТипОбеспечения>ипотека</credit:ТипОбеспечения>
+        <credit:ЦельКредита>покупка квартиры</credit:ЦельКредита>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент_Иванов -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент_Иванов">
         <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент"/>
+        <credit:имеетКредитнуюИсторию rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория_Иванов"/>
         <credit:имеетФинансовоеСостояние rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Финансы_Иванов"/>
         <credit:Возраст rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34</credit:Возраст>
         <credit:КоличествоИждивенцев rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</credit:КоличествоИждивенцев>
@@ -875,14 +913,42 @@
     
 
 
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент_Петров -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент_Петров">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент"/>
+        <credit:имеетКредитнуюИсторию rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория_Петров"/>
+        <credit:имеетФинансовоеСостояние rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Финансы_Петров"/>
+        <credit:Возраст rdf:datatype="http://www.w3.org/2001/XMLSchema#int">41</credit:Возраст>
+        <credit:КоличествоИждивенцев rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</credit:КоличествоИждивенцев>
+        <credit:ОбщийТрудовойСтаж rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</credit:ОбщийТрудовойСтаж>
+        <credit:Пол>Муж</credit:Пол>
+        <credit:РегионПроживания>Санкт-Петербург</credit:РегионПроживания>
+        <credit:СемейноеПоложение>женат</credit:СемейноеПоложение>
+        <credit:ФИО>Петров Пётр Петрович</credit:ФИО>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория_Иванов -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория_Иванов">
         <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория"/>
-        <credit:имеетКредитнуюИсторию rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория_Иванов"/>
         <credit:КоличествоПросрочек rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</credit:КоличествоПросрочек>
         <credit:КоличествоТекущихКредитов rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</credit:КоличествоТекущихКредитов>
         <credit:МаксимальнаяДлительностьПросрочкиДн rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</credit:МаксимальнаяДлительностьПросрочкиДн>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория_Петров -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория_Петров">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория"/>
+        <credit:ДатаПоследнейПросрочки rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-06-15T00:00:00</credit:ДатаПоследнейПросрочки>
+        <credit:КоличествоПросрочек rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</credit:КоличествоПросрочек>
+        <credit:КоличествоТекущихКредитов rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</credit:КоличествоТекущихКредитов>
+        <credit:МаксимальнаяДлительностьПросрочкиДн rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</credit:МаксимальнаяДлительностьПросрочкиДн>
     </owl:NamedIndividual>
     
 
@@ -897,6 +963,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Обеспечение_Ипотека_Петров -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Обеспечение_Ипотека_Петров">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбеспечениеПоКредиту"/>
+        <credit:объектЗалога rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбъектНедвижимости_КвартираПетрова"/>
+        <credit:ТипОбеспеченияТекст>ипотека на квартиру</credit:ТипОбеспеченияТекст>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбъектНедвижимости_КвартираИванова -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбъектНедвижимости_КвартираИванова">
@@ -905,6 +981,19 @@
         <credit:Ликвидность>высокая</credit:Ликвидность>
         <credit:Площадь rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</credit:Площадь>
         <credit:РыночнаяСтоимость rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6500000</credit:РыночнаяСтоимость>
+        <credit:ТипНедвижимости>квартира</credit:ТипНедвижимости>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбъектНедвижимости_КвартираПетрова -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбъектНедвижимости_КвартираПетрова">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОбъектНедвижимости"/>
+        <credit:АдресОбъекта>Санкт-Петербург, Невский проспект, д. 15</credit:АдресОбъекта>
+        <credit:Ликвидность>высокая</credit:Ликвидность>
+        <credit:Площадь rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">78</credit:Площадь>
+        <credit:РыночнаяСтоимость rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16000000</credit:РыночнаяСтоимость>
         <credit:ТипНедвижимости>квартира</credit:ТипНедвижимости>
     </owl:NamedIndividual>
     
@@ -925,6 +1014,41 @@
         <credit:РекомендованнаяСумма rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">800000</credit:РекомендованнаяСумма>
         <credit:РекомендованныйСрокМес rdf:datatype="http://www.w3.org/2001/XMLSchema#int">48</credit:РекомендованныйСрокМес>
         <credit:СкоринговыйБалл rdf:datatype="http://www.w3.org/2001/XMLSchema#int">710</credit:СкоринговыйБалл>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Оценка_Петров_Ипотека -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Оценка_Петров_Ипотека">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ОценкаКредитоспособности"/>
+        <credit:оцениваетЗаявку rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Заявка_Ипотека_Петров"/>
+        <credit:оцениваетКлиента rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Клиент_Петров"/>
+        <credit:учитываетКредитнуюИсторию rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитнаяИстория_Петров"/>
+        <credit:учитываетУсловияПродукта rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Продукт_Ипотека_УтиПути"/>
+        <credit:учитываетФинансовоеСостояние rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Финансы_Петров"/>
+        <credit:ДатаРасчёта rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-02-01T00:00:00</credit:ДатаРасчёта>
+        <credit:КлассРиска>средний</credit:КлассРиска>
+        <credit:ПДН rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.35</credit:ПДН>
+        <credit:РекомендованнаяСумма rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13000000</credit:РекомендованнаяСумма>
+        <credit:РекомендованныйСрокМес rdf:datatype="http://www.w3.org/2001/XMLSchema#int">240</credit:РекомендованныйСрокМес>
+        <credit:СкоринговыйБалл rdf:datatype="http://www.w3.org/2001/XMLSchema#int">680</credit:СкоринговыйБалл>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Продукт_Ипотека_УтиПути -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Продукт_Ипотека_УтиПути">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#КредитныйПродукт"/>
+        <credit:БазоваяСтавка rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.5</credit:БазоваяСтавка>
+        <credit:МаксимальнаяСумма rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000000</credit:МаксимальнаяСумма>
+        <credit:МаксимальныйСрокМес rdf:datatype="http://www.w3.org/2001/XMLSchema#int">360</credit:МаксимальныйСрокМес>
+        <credit:МинимальнаяСумма rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1000000</credit:МинимальнаяСумма>
+        <credit:МинимальныйСрокМес rdf:datatype="http://www.w3.org/2001/XMLSchema#int">60</credit:МинимальныйСрокМес>
+        <credit:НазваниеПродукта>Ипотека Город</credit:НазваниеПродукта>
+        <credit:ТипПродукта>ипотека</credit:ТипПродукта>
+        <credit:ТребуетЗалог rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</credit:ТребуетЗалог>
     </owl:NamedIndividual>
     
 
@@ -957,6 +1081,18 @@
     
 
 
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Решение_Ипотека_Петров -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Решение_Ипотека_Петров">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#РешениеПоЗаявке"/>
+        <credit:ОдобреннаяСумма rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12000000</credit:ОдобреннаяСумма>
+        <credit:ОдобренныйСрокМес rdf:datatype="http://www.w3.org/2001/XMLSchema#int">240</credit:ОдобренныйСрокМес>
+        <credit:ПроцентнаяСтавка rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.7</credit:ПроцентнаяСтавка>
+        <credit:СтатусРешения>одобрено</credit:СтатусРешения>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Финансы_Иванов -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Финансы_Иванов">
@@ -967,6 +1103,20 @@
         <credit:СвободныйДоход rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90000</credit:СвободныйДоход>
         <credit:СтажНаТекущемМесте rdf:datatype="http://www.w3.org/2001/XMLSchema#int">36</credit:СтажНаТекущемМесте>
         <credit:ТипЗанятости>Наёмный сотрудник</credit:ТипЗанятости>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2025/11/credit#Финансы_Петров -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2025/11/credit#Финансы_Петров">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2025/11/credit#ФинансовоеСостояниеКлиента"/>
+        <credit:ЕжемесячныеОбязательства rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40000</credit:ЕжемесячныеОбязательства>
+        <credit:ЕжемесячныйДоход rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">210000</credit:ЕжемесячныйДоход>
+        <credit:НаличиеЗалогов rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</credit:НаличиеЗалогов>
+        <credit:СвободныйДоход rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">170000</credit:СвободныйДоход>
+        <credit:СтажНаТекущемМесте rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</credit:СтажНаТекущемМесте>
+        <credit:ТипЗанятости>Наемный сотрудник</credit:ТипЗанятости>
     </owl:NamedIndividual>
 </rdf:RDF>
 
